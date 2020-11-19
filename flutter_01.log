@@ -1,0 +1,118 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --track-widget-creation --device-id=B4A51982-D671-4648-A49D-6F593F6EBA3C lib/main.dart
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/liting/Library/Logs/CoreSimulator/B4A51982-D671-4648-A49D-6F593F6EBA3C/system.log' (OS Error: No such file or directory, errno = 2)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:604:31)
+#3      ForwardingFile.writeAsBytesSync (package:file/src/forwarding/forwarding_file.dart:125:16)
+#4      ErrorHandlingFile.writeAsBytesSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:220:22)
+#5      _runSync (package:flutter_tools/src/base/error_handling_io.dart:486:14)
+#6      ErrorHandlingFile.writeAsBytesSync (package:flutter_tools/src/base/error_handling_io.dart:219:5)
+#7      IOSSimulator.ensureLogsExists (package:flutter_tools/src/ios/simulators.dart:579:17)
+<asynchronous suspension>
+#8      _IOSSimulatorLogReader._start (package:flutter_tools/src/ios/simulators.dart:690:20)
+<asynchronous suspension>
+#9      _runGuarded (dart:async/stream_controller.dart:847:24)
+#10     _BroadcastStreamController._subscribe (dart:async/broadcast_stream_controller.dart:213:7)
+#11     _ControllerStream._createSubscription (dart:async/stream_controller.dart:860:19)
+#12     _StreamImpl.listen (dart:async/stream_impl.dart:493:9)
+#13     FlutterDevice.startEchoingDeviceLog (package:flutter_tools/src/resident_runner.dart:499:38)
+<asynchronous suspension>
+#14     FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:551:11)
+<asynchronous suspension>
+#15     HotRunner.run (package:flutter_tools/src/run_hot.dart:329:31)
+#16     _rootRunUnary (dart:async/zone.dart:1198:47)
+#17     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#18     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#19     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#20     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#21     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#22     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#23     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#24     ResidentRunner.runSourceGenerators (package:flutter_tools/src/resident_runner.dart)
+#25     _rootRunUnary (dart:async/zone.dart:1198:47)
+#26     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#27     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#28     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#29     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#30     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#31     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#32     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#33     FlutterBuildSystem.buildIncremental (package:flutter_tools/src/build_system/build_system.dart)
+#34     _rootRunUnary (dart:async/zone.dart:1198:47)
+#35     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#36     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#37     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#38     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#39     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#40     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#41     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#42     _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart)
+#43     _rootRunUnary (dart:async/zone.dart:1198:47)
+#44     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#45     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#46     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#47     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#48     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#49     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#50     _rootRun (dart:async/zone.dart:1190:13)
+#51     _CustomZone.run (dart:async/zone.dart:1093:19)
+#52     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#53     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#54     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#55     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#56     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#57     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.23.0-18.1.pre, on Mac OS X 10.15.1 19B88 x86_64, locale zh-Hans-CN)
+    • Flutter version 1.23.0-18.1.pre at /Users/liting/flutter
+    • Framework revision 198df796aa (4 weeks ago), 2020-10-15 12:04:33 -0700
+    • Engine revision 1d12d82d9c
+    • Dart version 2.11.0 (build 2.11.0-213.1.beta)
+    • Pub download mirror https://pub.flutter-io.cn
+    • Flutter download mirror https://storage.flutter-io.cn
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.2)
+    • Android SDK at /Users/liting/Library/Android/sdk
+    • Platform android-30, build-tools 30.0.2
+    • ANDROID_HOME = /Users/liting/Library/Android/sdk
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 11.2.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 11.2.1, Build version 11B500
+    • CocoaPods version 1.10.0
+
+[✓] Android Studio (version 3.4)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 39.0.1
+    • Dart plugin version 183.6270
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2018.1.6)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] Connected device (1 available)
+    • iPhone 7 (mobile) • B4A51982-D671-4648-A49D-6F593F6EBA3C • ios • com.apple.CoreSimulator.SimRuntime.iOS-10-3 (simulator)
+
+• No issues found!
+```
